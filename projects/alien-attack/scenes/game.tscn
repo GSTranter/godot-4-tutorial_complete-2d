@@ -2,6 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://dmmed5dfdmjva" path="res://assets/textures/bg.png" id="1_yqjtg"]
 [ext_resource type="PackedScene" uid="uid://bcgx5ybhx1n5e" path="res://scenes/player.tscn" id="2_lnu2h"]
+[ext_resource type="PackedScene" uid="uid://l4mmt5kmqvpc" path="res://scenes/rocket.tscn" id="3_lnu2h"]
 
 [node name="Game" type="Node2D" unique_id=342813346]
 
@@ -11,7 +12,9 @@ offset_bottom = 736.0
 texture = ExtResource("1_yqjtg")
 stretch_mode = 1
 
+[node name="Rocket" parent="." unique_id=541821027 instance=ExtResource("3_lnu2h")]
+position = Vector2(177, 346)
+
 [node name="Player" parent="." unique_id=283673913 instance=ExtResource("2_lnu2h")]
 position = Vector2(43, 351)
 rotation = 1.5707964
-scale = Vector2(0.2, 0.2)
