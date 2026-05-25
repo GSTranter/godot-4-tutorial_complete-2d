@@ -2,9 +2,14 @@
 
 [ext_resource type="Texture2D" uid="uid://cw6l11rj18n4j" path="res://ufoGreen.png" id="1_4flbx"]
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_4flbx"]
+radius = 46.043457
+
 [node name="Player" type="RigidBody2D" unique_id=144497035]
-position = Vector2(588, 256)
 gravity_scale = 0.0
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=542204622]
 texture = ExtResource("1_4flbx")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1065970609]
+shape = SubResource("CircleShape2D_4flbx")
