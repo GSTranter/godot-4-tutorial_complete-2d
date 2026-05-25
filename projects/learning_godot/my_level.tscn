@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://37cgxnowje4n"]
+
+[ext_resource type="Texture2D" uid="uid://bmeltn1714pgm" path="res://icon.svg" id="1_qpi13"]
+
+[node name="MyLevel" type="Node2D" unique_id=1445377215]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=467631193]
+position = Vector2(542, 318)
+texture = ExtResource("1_qpi13")
