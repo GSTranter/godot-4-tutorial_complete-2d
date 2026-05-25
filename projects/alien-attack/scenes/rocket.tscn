@@ -9,6 +9,7 @@ height = 84.0
 
 [node name="Rocket" type="Area2D" unique_id=541821027]
 script = ExtResource("1_dkv7l")
+speed = 500
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1482859129]
 scale = Vector2(0.6, 0.6)

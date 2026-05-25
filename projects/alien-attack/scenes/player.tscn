@@ -4,7 +4,7 @@
 [ext_resource type="Script" uid="uid://ddptu5lrsjkds" path="res://scripts/player.gd" id="1_g2els"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_g2els"]
-radius = 34.0
+radius = 37.0
 height = 106.0
 
 [node name="Player" type="CharacterBody2D" unique_id=283673913]
@@ -12,10 +12,13 @@ motion_mode = 1
 script = ExtResource("1_g2els")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=923469103]
+rotation = 1.5707964
 scale = Vector2(0.2, 0.2)
 texture = ExtResource("1_3vyb7")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=325519863]
-position = Vector2(1, -4)
-rotation = 1.5707964
+position = Vector2(1, 0)
+rotation = 3.1415927
 shape = SubResource("CapsuleShape2D_g2els")
+
+[node name="RocketContainer" type="Node" parent="." unique_id=1812206119]
