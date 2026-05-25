@@ -5,30 +5,41 @@
 [ext_resource type="PackedScene" uid="uid://dk10h1bcane41" path="res://player.tscn" id="2_hbghi"]
 [ext_resource type="PackedScene" uid="uid://hi8awyc1262e" path="res://maze.tscn" id="4_ihfcg"]
 
+[sub_resource type="LabelSettings" id="LabelSettings_rka8t"]
+
 [sub_resource type="LabelSettings" id="LabelSettings_ihfcg"]
 font_size = 32
 
 [node name="Level1" type="Node2D" unique_id=1502563241]
 script = ExtResource("1_hn12h")
 
-[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=471561642]
+[node name="Graphics" type="Node" parent="." unique_id=625280233]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="Graphics" unique_id=471561642]
 layer = -1
 
-[node name="Background" type="TextureRect" parent="CanvasLayer" unique_id=1484771674]
+[node name="Background" type="TextureRect" parent="Graphics/CanvasLayer" unique_id=1484771674]
 z_index = -100
-offset_right = 1152.0
-offset_bottom = 648.0
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 texture = ExtResource("1_3hls8")
 stretch_mode = 1
 
-[node name="Player" parent="." unique_id=144497035 instance=ExtResource("2_hbghi")]
-position = Vector2(161, 97)
+[node name="Tutorial" type="Label" parent="Graphics" unique_id=1221853292]
+z_index = -5
+offset_left = 287.0
+offset_top = 68.0
+offset_right = 498.0
+offset_bottom = 161.0
+text = "Rules:
+- Go from start to end
+- If you go outside, ya die"
+label_settings = SubResource("LabelSettings_rka8t")
 
-[node name="Maze" parent="." unique_id=649067000 instance=ExtResource("4_ihfcg")]
-z_index = -10
-position = Vector2(167, 117)
-
-[node name="Start" type="Label" parent="." unique_id=875528081]
+[node name="Start" type="Label" parent="Graphics" unique_id=875528081]
 z_index = -5
 offset_left = 115.0
 offset_top = 25.0
@@ -37,7 +48,7 @@ offset_bottom = 70.0
 text = "START"
 label_settings = SubResource("LabelSettings_ihfcg")
 
-[node name="End" type="Label" parent="." unique_id=612912314]
+[node name="End" type="Label" parent="Graphics" unique_id=612912314]
 z_index = -5
 offset_left = 484.0
 offset_top = -5.0
@@ -45,5 +56,12 @@ offset_right = 563.0
 offset_bottom = 40.0
 text = "END"
 label_settings = SubResource("LabelSettings_ihfcg")
+
+[node name="Player" parent="." unique_id=144497035 instance=ExtResource("2_hbghi")]
+position = Vector2(161, 97)
+
+[node name="Maze" parent="." unique_id=649067000 instance=ExtResource("4_ihfcg")]
+z_index = -10
+position = Vector2(167, 117)
 
 [connection signal="body_exited" from="Maze" to="." method="_on_maze_body_exited"]
