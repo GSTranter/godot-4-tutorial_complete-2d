@@ -14,6 +14,7 @@ func _on_deathzone_area_entered(area: Area2D) -> void:
 
 func _on_player_took_damage() -> void:
 	lives -= 1
+	hud.set_lives_label(lives)
 	if lives <= 0:
 		player.die()
 
