@@ -17,7 +17,7 @@ height = 20.004648
 
 [node name="Enemy" type="Area2D" unique_id=758415860]
 collision_layer = 2
-collision_mask = 5
+collision_mask = 13
 script = ExtResource("1_4gyqm")
 speed = 200
 
