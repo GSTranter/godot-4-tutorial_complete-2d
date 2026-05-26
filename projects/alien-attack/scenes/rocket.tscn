@@ -8,6 +8,8 @@ radius = 16.0
 height = 84.0
 
 [node name="Rocket" type="Area2D" unique_id=541821027]
+collision_layer = 4
+collision_mask = 2
 script = ExtResource("1_dkv7l")
 speed = 500
 
@@ -22,3 +24,5 @@ shape = SubResource("CapsuleShape2D_3341w")
 
 [node name="VisibleNotifier" type="VisibleOnScreenNotifier2D" parent="." unique_id=943854205]
 position = Vector2(-32, 0)
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
