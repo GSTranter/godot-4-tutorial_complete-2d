@@ -40,3 +40,5 @@ shape = SubResource("CapsuleShape2D_4gyqm")
 position = Vector2(10, 26)
 rotation = -0.0007756392
 shape = SubResource("CapsuleShape2D_qi2p4")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
