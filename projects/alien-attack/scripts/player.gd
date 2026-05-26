@@ -34,6 +34,7 @@ func check_shoot():
 		rocket_inst.global_position.x += 80
 		
 		rocket_container.add_child(rocket_inst)
+		$ShootRocket.play()
 
 func take_damage():
 	emit_signal("took_damage")

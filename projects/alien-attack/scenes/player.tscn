@@ -2,6 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://lf1r3adffgig" path="res://assets/textures/player_ship.png" id="1_3vyb7"]
 [ext_resource type="Script" uid="uid://ddptu5lrsjkds" path="res://scripts/player.gd" id="1_g2els"]
+[ext_resource type="AudioStream" uid="uid://dpqoeplgcnb7v" path="res://assets/audio/sfx_laser2.wav" id="3_qhqgy"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_g2els"]
 radius = 37.0
@@ -23,3 +24,6 @@ rotation = 3.1415927
 shape = SubResource("CapsuleShape2D_g2els")
 
 [node name="RocketContainer" type="Node" parent="." unique_id=1812206119]
+
+[node name="ShootRocket" type="AudioStreamPlayer" parent="." unique_id=265054885]
+stream = ExtResource("3_qhqgy")
